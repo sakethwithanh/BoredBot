@@ -21,4 +21,8 @@ from BotAI import views
 urlpatterns = [
     path('admin/', admin.site.urls),
      path('', views.landPage,name='Land'),
+    path('home', views.homePage,name='Home'),
+      path('bored-api/',views.bored_api, name='bored_api'),
+    
+     
 ]

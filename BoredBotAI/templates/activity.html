@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoredBotAI Activity</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #2c1d3e, #7191b1, #3498db, #2980b9);
+            margin: 0;
+            color: #fff;
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between; /* Add space between items */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:first-child {
+            margin: auto; /* Move the first child (Contact) to the right */
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        #content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #landing-content {
+            text-align: center;
+            padding: 80px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            width: 80%; /* Set a width percentage for responsiveness */
+        }
+
+        h2 {
+            font-size: 3em; /* Increase font size */
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
+        button {
+            padding: 15px 30px; /* Adjust padding for a larger button */
+            font-size: 1em;
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 20px;
+        }
+
+        button:hover {
+            background-color: #219952;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        
+        
+        <h1>Random Activity Suggestion:</h1>
+        <h1>
+        <a href="{% url 'Home'%}">Home</a>
+        </h1>
+    </nav>
+
+    <div id="content-container">
+
+        <div id="landing-content">
+            <h2>{{ activity.activity }}</h2>
+            <h3>Type: {{ activity.type }}</h3>
+            <h4>Participants: {{ activity.participants }}</h4>
+            <p>Price: {{ activity.price }}</p>
+            <form action="{% url 'bored_api' %}" method="get">
+                <button type="submit">Get New Activity</button>
+            </form>
+        </div>
+        
+    </div>
+
+</body>
+</html>

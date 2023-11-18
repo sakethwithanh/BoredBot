@@ -1,0 +1,61 @@
+This code is part of a Django view function named bored_api. Let's break down what this code does:
+
+Endpoint URL Setup:
+
+python
+Copy code
+api_url = "https://www.boredapi.com/api/activity"
+It defines the URL of the Bored API endpoint that provides random activity suggestions.
+
+Making a GET Request:
+
+python
+Copy code
+response = requests.get(api_url)
+It uses the requests library to make a GET request to the specified Bored API endpoint.
+
+Handling the Response:
+
+python
+Copy code
+if response.status_code == 200:
+    activity_data = response.json()
+    return render(request, 'activity.html', {'activity': activity_data})
+else:
+    return render(request, 'activity.html', {'activity': {'activity': 'Default Activity'}})
+It checks if the HTTP response status code is 200 (OK). If it is, it assumes a successful response and parses the JSON content of the response into a Python dictionary (activity_data). Then, it renders the 'activity.html' template, passing the activity data to be displayed.
+
+If the response status code is not 200 (indicating an error), it renders the 'activity.html' template with a default activity (in this case, "Default Activity").
+
+So, in summary, this Django view function fetches a random activity suggestion from the Bored API, parses the JSON response, and renders an HTML template to display the activity details. If there's an error in the request, it displays a default activity instead. The rendered HTML template likely includes placeholders to present the received activity data to the user.
+
+
+
+
+
+
+
+Message ChatGPT…
+
+ChatGPT can make mistakes. Consider checking important information
+
+
+pip freeze
+
+pip install virtualenv------alredy have
+
+python  -m virtualenv userenv
+
+pip install django 
+django-admin startproject BoredBotAI
+
+
+
+python mange.py staartapp bot 
+
+
+> regester yout app in setting.py og the project 
+>create templates in the project not app
+> settings>templates>dirs 
+>create views of the html pages
+>set urls after views def functions 
