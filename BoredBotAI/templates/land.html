@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoredBotAI Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to bottom, #2c1d3e, #7191b1, #3498db, #2980b9); /* Updated gradient with different colors */
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      position: relative;
+      opacity: 0.9; /* Adjust the overall opacity */
+    }
+
+    /* Background pattern */
+    body::before {
+      content: "";
+      background-image: url('pattern.png'); /* Replace with your pattern image */
+      opacity: 0.05; /* Adjust the opacity as needed for the pattern overlay */
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    #landing-content {
+      text-align: center;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #ecf0f1; /* Light gray text color */
+    }
+
+    /* Button styling */
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1em;
+      text-decoration: none;
+      color: #fff;
+      background-color: #27ae60; /* Green color for the button */
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #219952; /* Darker green on hover */
+    }
+
+    /* Additional styling for the page */
+    /* Add your own styles or remove/modify existing ones */
+    /* Example styles: */
+    /* #landing-content { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); padding: 20px; } */
+  </style>
+</head>
+<body>
+
+  <div id="landing-content">
+    <h1>BoredBotAI</h1>
+    <p>Your go-to solution for beating boredom with AI-powered entertainment.</p>
+    <a href="#" class="cta-button">Get Started</a>
+  </div>
+
+</body>
+</html>
